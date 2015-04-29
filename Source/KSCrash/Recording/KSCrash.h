@@ -30,6 +30,8 @@
 #import "KSCrashReportWriter.h"
 #import "KSCrashReportFilter.h"
 #import "KSCrashType.h"
+#import "KSCrashReportStore.h"
+
 
 
 typedef enum
@@ -194,5 +196,7 @@ typedef enum
                   lineOfCode:(NSString*) lineOfCode
                   stackTrace:(NSArray*) stackTrace
             terminateProgram:(BOOL) terminateProgram;
+            
+@property(nonatomic,readwrite,retain) KSCrashReportStore* crashReportStore;
 
 @end
